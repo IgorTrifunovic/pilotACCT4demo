@@ -37,7 +37,7 @@ class LoginPage(BasePage):
         time.sleep(1)
 
     def login(self, email="", password=""):
-        self.nav.navigateConfirmAge()
+        self.nav.navigate_confirmAge()       # slucajno bio obrisan nav page
         self.clickLoginLink()
         self.enterEmail(email)
         self.enterPassword(password)
