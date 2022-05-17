@@ -8,3 +8,4 @@ search_box.send_keys('ChromeDriver') # typing in serach box
 search_box.submit() # serach query
 time.sleep(5) # Let the user actually see something!
 driver.quit() # quit and close
+
