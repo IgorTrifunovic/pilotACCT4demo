@@ -44,8 +44,12 @@ class LoginPage(BasePage):
         self.clickLoginButton()
 
     def verifyLoginSuccessful(self):
+
+        result = self.isElementPresent('//*[@id="root"]/div/div[1]/div/header[1]/div/div[3]/div/div/button/span[1]/span/div',
+
         self.elementClick(self._playerprofile_icon, locatorType="xpath")
         result = self.isElementPresent(self._playerenotification_tab,
+
                                        locatorType="xpath")
         return result
 
@@ -60,3 +64,4 @@ class LoginPage(BasePage):
     def logout(self):
         self.nav.navigateToSettings()
         self.elementClick(locator="//a[@href='/logout']", locatorType='xpath')
+
