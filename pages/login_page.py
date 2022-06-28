@@ -20,7 +20,7 @@ class LoginPage(BasePage):
     _password_field = '//*[@id="logInForm"]/div/div[3]/div[2]/div/div/div/input'
     _login_button = '//*[@id="logInForm"]/button/span'
     _playerprofile_icon = '//*[@id="root"]/div/div[1]/div/header[1]/div/div[3]/div/div/button/span[1]/span/div'
-
+    _playerenotification_tab = '//*[@id="simple-menu"]/div[3]/div/div[1]/div/div[1]/div'
     def clickLoginLink(self):
         self.elementClick(self._login_link, locatorType="xpath")
         time.sleep(1)
@@ -46,6 +46,10 @@ class LoginPage(BasePage):
     def verifyLoginSuccessful(self):
 
         result = self.isElementPresent('//*[@id="root"]/div/div[1]/div/header[1]/div/div[3]/div/div/button/span[1]/span/div',
+
+        self.elementClick(self._playerprofile_icon, locatorType="xpath")
+        result = self.isElementPresent(self._playerenotification_tab,
+
                                        locatorType="xpath")
         return result
 
