@@ -60,4 +60,3 @@ class LoginPage(BasePage):
     def logout(self):
         self.nav.navigateToSettings()
         self.elementClick(locator="//a[@href='/logout']", locatorType='xpath')
-
